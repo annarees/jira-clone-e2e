@@ -11,13 +11,25 @@
 
 describe('Issue filtering', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('https://jira.ivorreic.com/project/board');
   });
 
   it('Should filter issues by title', () => {
     getSearchInput().debounced('type', 'multiple assignee');
     cy.get('[data-testid="list-issue"]').should('have.length', '1');
   });
+  //const dataForSearch = [
+
+    //{
+    
+    //issueSearch: ‘multiple assignees’,
+    
+    //expectedNumberOfFoundIssues '1'
+    
+    //},
+   
+    
+//];
 
   /**
    * New tests can be created here for practice

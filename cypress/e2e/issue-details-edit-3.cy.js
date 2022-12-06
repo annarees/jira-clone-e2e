@@ -33,7 +33,7 @@
 
 describe('Issue details editing', () => {
   beforeEach(() => {
-    cy.visit('https://jira.ivorreic.com/project/board');
+    cy.visit('');
     cy.url().should('eq', 'https://jira.ivorreic.com/project/board').then((url) => {
       cy.visit(url + '/board');
       cy.contains('This is an issue of type: Task.').click();
